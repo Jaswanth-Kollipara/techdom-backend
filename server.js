@@ -30,11 +30,10 @@ initializeDBAndServer();
 // const bcrypt = require("bcrypt");
 /** 
  const hashedPassword=await bcrypt.hash(request.body.password,10);
-
 **/
 
-app.get('/techdom',async(req,res)=>{
-    const getQuerry=`select * from techdom;`;
+app.get('/logindata',async(req,res)=>{
+    const getQuerry=`select * from login;`;
     const getArray=await db.all(getQuerry);
     res.send(getArray);
 });
